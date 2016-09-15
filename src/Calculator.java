@@ -54,7 +54,7 @@ public class Calculator extends JFrame{
         jb[18].addActionListener(e->{
             try{
                 jt.setText(jt.getText().substring(0,jt.getText().length()-1));
-            }catch(Exception ex) { }
+            }catch(Exception ignored) { }//忽略这个异常   IDEA就是好用！！！
         });
         jb[19].addActionListener(e->{
             try{
