@@ -65,6 +65,9 @@ public class Calculator extends JFrame{
                 jt.setText("ERROR!");
             }
         });
+        //禁止文本域的enter换行
+        KeyStroke enter = KeyStroke.getKeyStroke("ENTER");
+        jt.getInputMap().put(enter, "none");
 
         this.getRootPane().setDefaultButton(jb[19]);
         //太累！不想研究了
