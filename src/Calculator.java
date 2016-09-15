@@ -57,9 +57,13 @@ public class Calculator extends JFrame{
             }catch(Exception ex) { }
         });
         jb[19].addActionListener(e->{
-            double x= calculate(jt.getText()+"#");
-            jt.setText("");
-            jt.append(String.valueOf(x));
+            try{
+                double x= calculate(jt.getText()+"#");
+                jt.setText("");
+                jt.append(String.valueOf(x));
+            }catch(Exception ex){
+                jt.setText("ERROR!");
+            }
         });
 
         this.getRootPane().setDefaultButton(jb[19]);
