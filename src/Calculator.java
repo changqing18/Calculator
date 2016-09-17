@@ -13,7 +13,7 @@ public class Calculator extends JFrame{
 
     private Calculator(){
 
-        setTitle("¼ÆËãÆ÷");
+        setTitle("è®¡ç®—å™¨");
         setSize(266,340);
         Container c=getContentPane();
         c.setLayout(null);
@@ -54,7 +54,7 @@ public class Calculator extends JFrame{
         jb[18].addActionListener(e->{
             try{
                 jt.setText(jt.getText().substring(0,jt.getText().length()-1));
-            }catch(Exception ignored) { }//ºöÂÔÕâ¸öÒì³£   IDEA¾ÍÊÇºÃÓÃ£¡£¡£¡
+            }catch(Exception ignored) { }//å¿½ç•¥è¿™ä¸ªå¼‚å¸¸   IDEAå°±æ˜¯å¥½ç”¨ï¼ï¼ï¼
         });
         jb[19].addActionListener(e->{
             try{
@@ -65,13 +65,13 @@ public class Calculator extends JFrame{
                 jt.setText("ERROR!");
             }
         });
-        //½ûÖ¹ÎÄ±¾ÓòµÄenter»»ĞĞ
+        //ç¦æ­¢æ–‡æœ¬åŸŸçš„enteræ¢è¡Œ
         KeyStroke enter = KeyStroke.getKeyStroke("ENTER");
         jt.getInputMap().put(enter, "none");
 
         this.getRootPane().setDefaultButton(jb[19]);
-        //Ì«ÀÛ£¡²»ÏëÑĞ¾¿ÁË
-        //ÏÂÃæµÄ£¬²»ÖªµÀÖ÷ÌåÊÇÊ²Ã´£¬µ±Ö»ÓĞ½¹µãÔÚÄÇ¸öÖ÷ÌåÉÏ²Å»áÏìÓ¦£¬°¥£¬²»ÖªµÀÔõÃ´Åª¡£
+        //å¤ªç´¯ï¼ä¸æƒ³ç ”ç©¶äº†
+        //ä¸‹é¢çš„ï¼Œä¸çŸ¥é“ä¸»ä½“æ˜¯ä»€ä¹ˆï¼Œå½“åªæœ‰ç„¦ç‚¹åœ¨é‚£ä¸ªä¸»ä½“ä¸Šæ‰ä¼šå“åº”ï¼Œå“ï¼Œä¸çŸ¥é“æ€ä¹ˆå¼„ã€‚
         /*c.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -83,8 +83,8 @@ public class Calculator extends JFrame{
                 }
             }
         });*/
-        //²»ÖªµÀÎªÊ²Ã´ÏìÓ¦²»ÁË¼üÅÌÊÂ¼ş£¿£¿£¿
-        //²»ÖªµÀÎªÊ²Ã´ÏÂÃæµÄµÄÕâ¸ö²»ĞĞ£¿£¿£¿
+        //ä¸çŸ¥é“ä¸ºä»€ä¹ˆå“åº”ä¸äº†é”®ç›˜äº‹ä»¶ï¼Ÿï¼Ÿï¼Ÿ
+        //ä¸çŸ¥é“ä¸ºä»€ä¹ˆä¸‹é¢çš„çš„è¿™ä¸ªä¸è¡Œï¼Ÿï¼Ÿï¼Ÿ
 
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
