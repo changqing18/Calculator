@@ -62,7 +62,10 @@ public class Calculator extends JFrame{
                 jt.setText("");
                 jt.append(String.valueOf(x));
             }catch(ArithmeticException ae){
-                jt.setText(ae.getMessage());
+                if(ae.getMessage()!=null)
+                    jt.setText(ae.getMessage());
+                else
+                    jt.setText("ERROR!");
             }catch(Exception ex){
                 jt.setText("ERROR!");
             }
