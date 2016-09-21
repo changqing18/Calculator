@@ -61,6 +61,8 @@ public class Calculator extends JFrame{
                 double x= calculate(jt.getText()+"#");
                 jt.setText("");
                 jt.append(String.valueOf(x));
+            }catch(ArithmeticException ae){
+                jt.setText(ae.getMessage());
             }catch(Exception ex){
                 jt.setText("ERROR!");
             }
@@ -108,6 +110,8 @@ public class Calculator extends JFrame{
             operandStack.push(e);
         }
         if (b.equals("/")) {
+            if(c==0)
+                throw new ArithmeticException("DivideByZero!");
             e = d / c;
             operandStack.push(e);
         }
