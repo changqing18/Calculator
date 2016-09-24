@@ -61,13 +61,11 @@ public class Calculator extends JFrame{
                 double x= calculate(jt.getText()+"#");
                 jt.setText("");
                 jt.append(String.valueOf(x));
-            }catch(ArithmeticException ae){
-                if(ae.getMessage()!=null)
-                    jt.setText(ae.getMessage());
-                else
-                    jt.setText("ERROR!");
             }catch(Exception ex){
-                jt.setText("ERROR!");
+                if(ex.getMessage()==null)
+                    jt.setText("ERROR!");
+                else
+                    jt.setText(ex.getMessage());
             }
         });
         //禁止文本域的enter换行
