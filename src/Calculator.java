@@ -112,7 +112,8 @@ public class Calculator extends JFrame{
         }
         if (b.equals("/")) {
             if(c==0)
-                throw new ArithmeticException("DivideByZero!");
+                throw new ArithmeticException("DivideByZero!");//不可修改为Exception
+            // Exception的异常是必须处理的,是受控异常;而ArithmeticException 不是必须处理的 ,受控异常必须强制处理
             e = d / c;
             operandStack.push(e);
         }
